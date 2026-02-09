@@ -15,7 +15,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&hide_border=true&include_all_commits=true&rank_icon=percentile&theme=github_dark
+          options: username=${{ github.repository_owner }}&show_icons=true&hide_border=true&include_all_commits=true&rank_icon=percentile&exclude_repo=mimotion&theme=github_dark
           path: profile/stats_dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           
@@ -23,7 +23,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&hide_border=true&include_all_commits=true&rank_icon=percentile&theme=default
+          options: username=${{ github.repository_owner }}&show_icons=true&hide_border=true&include_all_commits=true&rank_icon=percentile&exclude_repo=mimotion&theme=default
           path: profile/stats_light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
