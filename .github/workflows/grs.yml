@@ -18,7 +18,7 @@ jobs:
           options: username=${{ github.repository_owner }}&show_icons=true&hide_border=true&include_all_commits=true&rank_icon=percentile&exclude_repo=mimotion&theme=github_dark
           path: profile/stats_dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-          
+
       - name: Generate stats card (light)
         uses: readme-tools/github-readme-stats-action@v1
         with:
@@ -43,22 +43,142 @@ jobs:
           path: profile/top-langs_light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate pin card (dark)
+      # Desktop Schedule
+      - name: Generate desktop-schedule card (dark)
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: pin
-          options: username=readme-tools&repo=github-readme-stats&hide_border=true&theme=github_dark
-          path: profile/pin-readme-tools-github-readme-stats_dark.svg
+          options: username=${{ github.repository_owner }}&repo=desktop-schedule&hide_border=true&theme=github_dark
+          path: profile/pinned-desktop-schedule_dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate pin card (light)
+      - name: Generate desktop-schedule card (light)
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: pin
-          options: username=readme-tools&repo=github-readme-stats&hide_border=true&theme=default
-          path: profile/pin-readme-tools-github-readme-stats_light.svg
+          options: username=${{ github.repository_owner }}&repo=desktop-schedule&hide_border=true&theme=default
+          path: profile/pinned-desktop-schedule_light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-          
+
+      # GitScratch Frontend (UniScratch Organization)
+      - name: Generate gitscratch-frontend card (dark)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=UniScratch&repo=gitscratch-frontend&hide_border=true&theme=github_dark
+          path: profile/pinned-gitscratch-frontend_dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate gitscratch-frontend card (light)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=UniScratch&repo=gitscratch-frontend&hide_border=true&theme=default
+          path: profile/pinned-gitscratch-frontend_light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # GitScratch Backend (UniScratch Organization)
+      - name: Generate gitscratch-backend-flask card (dark)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=UniScratch&repo=gitscratch-backend-flask&hide_border=true&theme=github_dark
+          path: profile/pinned-gitscratch-backend-flask_dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate gitscratch-backend-flask card (light)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=UniScratch&repo=gitscratch-backend-flask&hide_border=true&theme=default
+          path: profile/pinned-gitscratch-backend-flask_light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Mine Genshin
+      - name: Generate mine-genshin card (dark)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=mine-genshin&hide_border=true&theme=github_dark
+          path: profile/pinned-mine-genshin_dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate mine-genshin card (light)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=mine-genshin&hide_border=true&theme=default
+          path: profile/pinned-mine-genshin_light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Rainmeter QWeather Widget
+      - name: Generate rainmeter-qweather-widget card (dark)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=rainmeter-qweather-widget&hide_border=true&theme=github_dark
+          path: profile/pinned-rainmeter-qweather-widget_dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate rainmeter-qweather-widget card (light)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=rainmeter-qweather-widget&hide_border=true&theme=default
+          path: profile/pinned-rainmeter-qweather-widget_light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Personal Blog
+      - name: Generate timfang4162.github.io card (dark)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=timfang4162.github.io&hide_border=true&theme=github_dark
+          path: profile/pinned-timfang4162-github-io_dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate timfang4162.github.io card (light)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=timfang4162.github.io&hide_border=true&theme=default
+          path: profile/pinned-timfang4162-github-io_light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # NextBot
+      - name: Generate NextBot card (dark)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=NextBot&hide_border=true&theme=github_dark
+          path: profile/pinned-NextBot_dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate NextBot card (light)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=NextBot&hide_border=true&theme=default
+          path: profile/pinned-NextBot_light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # MicroPython NV3007
+      - name: Generate micropython-nv3007 card (dark)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=micropython_nv3007&hide_border=true&theme=github_dark
+          path: profile/pinned-micropython-nv3007_dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate micropython-nv3007 card (light)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=micropython_nv3007&hide_border=true&theme=default
+          path: profile/pinned-micropython-nv3007_light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Commit cards
         run: |
           git config user.name "github-actions"
