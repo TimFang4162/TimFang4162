@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Timmy's GitHub Stats, Rank: B-</title>
-        <desc id="descId">Total Stars Earned: 26, Total Commits  : 777, Total PRs: 6, Total Issues: 26, Contributed to (last year): 8</desc>
+        <desc id="descId">Total Stars Earned: 26, Total Commits  : 777, Total PRs: 7, Total Issues: 26, Contributed to (last year): 9</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 166.112877812538;
+        stroke-dashoffset: 165.3168927767229;
       }
     }
   
@@ -146,7 +146,7 @@
           Top
         </text>
         <text x="-5" y="12" alignment-baseline="central" dominant-baseline="central" text-anchor="middle" data-testid="percentile-rank-value" class="rank-percentile-text">
-          66.1%
+          65.8%
         </text>
       
         </g>
@@ -195,7 +195,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs"
-      >6</text>
+      >7</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
@@ -225,7 +225,7 @@
         x="219.01"
         y="12.5"
         data-testid="contribs"
-      >8</text>
+      >9</text>
     </g>
   </g>
     </svg>
