@@ -22,13 +22,29 @@ STATS_RE = re.compile(r"(<!-- STATS:START.*?-->\n)(.*?)(\n<!-- STATS:END)", re.D
 
 
 def api(path: str):
-    req = urllib.request.Request(API + path, headers={
+    req = urllib.request.Request(API + path, headers=auth_headers())
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return json.load(resp)
+
+
+def commit_count(repo: str) -> int:
+    # Commit search API returns wildly unstable totals, so count commits on the
+    # default branch via pagination (per_page=1, last page number = count).
+    req = urllib.request.Request(
+        f"{API}/repos/{OWNER}/{repo}/commits?per_page=1", headers=auth_headers())
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        body = json.load(resp)
+        link = resp.headers.get("Link", "")
+    last = re.search(r'page=(\d+)>; rel="last"', link)
+    return int(last.group(1)) if last else len(body)
+
+
+def auth_headers() -> dict:
+    return {
         "User-Agent": OWNER + "-stats-action",
         "Accept": "application/vnd.github+json",
         "Authorization": "Bearer " + os.environ["GITHUB_TOKEN"],
-    })
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return json.load(resp)
+    }
 
 
 def search_count(query: str) -> int:
@@ -41,9 +57,9 @@ def fmt(n: int) -> str:
 
 def main() -> int:
     user = api("/users/" + OWNER)
-    repos = api(f"/users/{OWNER}/repos?per_page=100")
-    stars = sum(r["stargazers_count"] for r in repos if not r["fork"])
-    commits = api("/search/commits?q=" + urllib.parse.quote(f"author:{OWNER}"))["total_count"]
+    repos = [r for r in api(f"/users/{OWNER}/repos?per_page=100") if not r["fork"]]
+    stars = sum(r["stargazers_count"] for r in repos)
+    commits = sum(commit_count(r["name"]) for r in repos)
     prs = search_count(f"author:{OWNER} type:pr")
     followers = user["followers"]
 
