@@ -1,15 +1,10 @@
-### Hi there 👋
+### Hi, I'm Timmy 👋
 
-![image](./image.jpg)
+- 🎓 Software Engineering undergrad in Zhejiang, China
+- 🚩 CTF player @ A1natas (reverse & web security) · 🖥️ self-hosting enthusiast (I contribute to [immich](https://github.com/immich-app/immich)) · 🔧 I build small tools that scratch my own itches
+- 🌱 Currently learning: Rust · Go · how LLMs actually work
+- ✍️ I write (in Chinese) about security, dev tooling and tinkering at [blog.timmy.host](https://blog.timmy.host)
 
-<picture>
-  <source srcset="./profile/stats_dark.svg" media="(prefers-color-scheme: dark)" />
-  <source srcset="./profile/stats_light.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
-  <img src="./profile/stats_light.svg" alt="Stats" />
-</picture>
-
-<picture>
-  <source srcset="./profile/top-langs_dark.svg" media="(prefers-color-scheme: dark)" />
-  <source srcset="./profile/top-langs_light.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
-  <img src="./profile/top-langs_light.svg" alt="Top Languages" />
-</picture>
+<!-- STATS:START (auto-updated by .github/workflows/stats.yml, do not edit) -->
+⭐ 33 stars · 🕓 1,198 commits · 🔀 6 PRs · 👥 51 followers
+<!-- STATS:END -->
