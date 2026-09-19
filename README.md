@@ -1,7 +1,7 @@
 ### Hi, I'm Timmy 👋
 
 - 🎓 Software Engineering undergrad in Zhejiang, China
-- 🚩 CTF player @ A1natas (reverse & web security) · 🖥️ self-hosting enthusiast (I contribute to [immich](https://github.com/immich-app/immich)) · 🔧 I build small tools that scratch my own itches
+- 🚩 CTF player @ [A1natas](https://www.a1natas.com/) (misc & ai security) · 🖥️ self-hosting enthusiast · 🔧 I build small tools that scratch my own itches
 - 🌱 Currently learning: Rust · Go · how LLMs actually work
 - ✍️ I write (in Chinese) about security, dev tooling and tinkering at [blog.timmy.host](https://blog.timmy.host)
 
